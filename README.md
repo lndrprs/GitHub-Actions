@@ -77,9 +77,26 @@ A1.3 - Continuous Integration
  >     - Quando se monta um CI no repositório, o GitHub analisa o código no repositório e recomenda workflows de CI baseados na linguagem e framework do repositório;
 
 A1.4 - Continuous Deployment 
- > - 
+ > - Prática de automação para publicação e provisionamento de updates no software; 
+ >   - O código é automaticamente construído e testado antes do provisionamento; 
+ >   - CD frequentemente é usado em conjunto com CI. 
 
- 
+A1.5 - Actions vs Apps 
+ > - GitHub Marketplace oferta Actions e Aps, cada um com ferramentas úteis para automação e workflows. 
+ >
+ > - GitHub Apps 
+ >   - Executa persistentemente e reage a eventos rapidamente; 
+ >   - Funciona bem quando dados persistentes são necessários;
+ >   - Funciona melhor com requisições API, que não consomem tanto tempo;
+ >   - Executado em um servidor ou infraestrutura que você providencia. 
+ >
+ > - GitHub Actions
+ >   - Providencia automação que performa CI e CD;
+ >   - Pode ser executado em máquinas runners ou contêineres Docker;
+ >   - Pode incluir um clone do repositório, permitindo ferramentas de provisionamento, e publicação, formatadores de código, e command line;
+ >   - Não precisa provisionar código ou servir uma aplicação;
+ >   - Possui interface simples para criar e usar segredos, que permite ações interagirem com serviços terceiros. 
+
 </br>
 </div>
 </details>
