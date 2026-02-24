@@ -77,7 +77,10 @@ A1.2 - Componentes do Actions
  >     - Para definir uma variável entre múltiplos workflows, configura no nível de organização, repositório ou ambiente. 
  >
  > - Contextos 
- >   - 
+ >   - Maneira de acessar informação sobre execuções de workflow, variáveis, ambientes de runners, jobs, e processos / jobs;
+ >   - Cada contexto é um objeto que contém propriedades, que podem ser strings ou outros objetos.
+ >
+ > - Expressões
 
 A1.3 - Continuous Integration 
  > - Prática de software que requer commitar código frequentemente à um repositório compartilhado; 
