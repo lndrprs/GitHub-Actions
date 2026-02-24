@@ -68,7 +68,18 @@ A1.2 - Componentes do Actions
  >   - GitHub fornece runners Linux, Windows e macOS para execução dos workflows;
  >   - Cada workflow é executado em uma máquina virtual "nova";
  >     - Caso seja necessário sistemas operacionais diferentes, ou hardwares específicos, é possível hosperdar seus próprios runners. 
+ >
+ 
+A1.3 - Continuous Integration 
+ > - Prática de software que requer commitar código frequentemente à um repositório compartilhado; 
+ >   - GitHub executa testes de CI e providencia resultados de cada teste, para verificar introduções de erros;
+ >   - Quando todos os testes de CI em um workflow são validados, as mudanças são empurradas para serem revisionadas por um membro do time, ou unificadas; 
+ >     - Quando se monta um CI no repositório, o GitHub analisa o código no repositório e recomenda workflows de CI baseados na linguagem e framework do repositório;
 
+A1.4 - Continuous Deployment 
+ > - 
+
+ 
 </br>
 </div>
 </details>
