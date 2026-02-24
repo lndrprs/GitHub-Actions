@@ -50,7 +50,24 @@ A1.2 - Componentes do Actions
  >     - Essa atividade pode ser um pull request, uma abertura de issue, ou commit;
  >     - Também pode ser agendado, ou por post de API REST, ou manualmente.
  >     - Para uma lista completa de eventos: https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows  
-
+ > 
+ > - Jobs
+ >   - Conjunto de processos de um workflow, que é executado no mesmo runner; 
+ >   - Cada processo é um script, ou uma ação; 
+ >   - Processos são executados em ordem, e são dependentes um do outro;
+ >   - É possível compartilhar dados entre processos - por serem executados no mesmo runner; 
+ >   - Também é possível usar "matrix", para executar o mesmo job múltiplas  vezes, com diferentes combinações de variáveis. 
+ >
+ > - Actions 
+ >   - "Action" é um conjunto de jobs predefinidos e reutilizáveis que performam tarefas específicas em um workflow;
+ >   - Isso ajuda a reduzir a quantidade de códigos repetidos que se digita em um arquivo de workflow. 
+ >
+ > - Runner 
+ >   - Runner é um servidor que executa workflows quando são engatilhados; 
+ >   - Cada runner pode executar um job por vez;
+ >   - GitHub fornece runners Linux, Windows e macOS para execução dos workflows;
+ >   - Cada workflow é executado em uma máquina virtual "nova";
+ >     - Caso seja necessário sistemas operacionais diferentes, ou hardwares específicos, é possível hosperdar seus próprios runners. 
 
 </br>
 </div>
