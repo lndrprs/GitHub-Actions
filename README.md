@@ -56,7 +56,7 @@ A1.2 - Componentes do Actions
  >   - Cada processo é um script, ou uma ação; 
  >   - Processos são executados em ordem, e são dependentes um do outro;
  >   - É possível compartilhar dados entre processos - por serem executados no mesmo runner; 
- >   - Também é possível usar "matrix", para executar o mesmo job múltiplas  vezes, com diferentes combinações de variáveis. 
+ >   - Também é possível usar "matrix", para executar o mesmo job múltiplas vezes, com diferentes combinações de variáveis. 
  >
  > - Actions 
  >   - "Action" é um conjunto de jobs predefinidos e reutilizáveis que performam tarefas específicas em um workflow;
@@ -67,9 +67,18 @@ A1.2 - Componentes do Actions
  >   - Cada runner pode executar um job por vez;
  >   - GitHub fornece runners Linux, Windows e macOS para execução dos workflows;
  >   - Cada workflow é executado em uma máquina virtual "nova";
- >     - Caso seja necessário sistemas operacionais diferentes, ou hardwares específicos, é possível hosperdar seus próprios runners. 
+ >     - Caso seja necessário sistemas operacionais diferentes, ou hardwares específicos, é possível hospedar seus próprios runners. 
  >
- 
+ > - Variáveis
+ >   - Servem para armazenar ou reusar informações de configuração, não sensíveis; 
+ >   - Possível armazenar qualquer dado de configuração, como flags de compilação, usuários, servidores, etc; 
+ >   - As variáveis ficam no Runner que executa o workflow; 
+ >     - Para definir a variável em um workflow, usa o "env"; 
+ >     - Para definir uma variável entre múltiplos workflows, configura no nível de organização, repositório ou ambiente. 
+ >
+ > - Contextos 
+ >   - 
+
 A1.3 - Continuous Integration 
  > - Prática de software que requer commitar código frequentemente à um repositório compartilhado; 
  >   - GitHub executa testes de CI e providencia resultados de cada teste, para verificar introduções de erros;
