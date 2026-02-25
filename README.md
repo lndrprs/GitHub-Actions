@@ -60,7 +60,9 @@ A1.2 - Componentes do Actions
  >
  > - Actions 
  >   - "Action" é um conjunto de jobs predefinidos e reutilizáveis que performam tarefas específicas em um workflow;
- >   - Isso ajuda a reduzir a quantidade de códigos repetidos que se digita em um arquivo de workflow. 
+ >   - Isso ajuda a reduzir a quantidade de códigos repetidos que se digita em um arquivo de workflow;
+ >   - As ações podem ser customizadas, e executadas diretamente numa máquina ou em um contêiner Docker;
+ >     - É possível definir as ações de input, output e variáveis de ambiente. 
  >
  > - Runner 
  >   - Runner é um servidor que executa workflows quando são engatilhados; 
@@ -81,6 +83,16 @@ A1.2 - Componentes do Actions
  >   - Cada contexto é um objeto que contém propriedades, que podem ser strings ou outros objetos.
  >
  > - Expressões
+ >   - Expressões podem ser usadas programaticamente para definir variáveis de ambiente em arquivos de workflow e contextos de acesso; 
+ >   - Uma expressão pode ser qualquer combinação de valores literais, referências de contexto ou funções; 
+ >   - É possível combinar literais, referências de contexto, e funções usando operadores;
+ >   - Normalmente usam condicionais "if", para definir se um processo deve ser executado - quando "true", o processo é executado. 
+ >
+ > - Workflows Reutilizáveis 
+ >   - Reutilizar workflows evita duplicação - sendo melhor para manter e criar novos workflows rapidamente;
+ >   - Um workflow que usa outro workflow se chama workflow "caller" - e o workflow chamado se chama "called" workflow; 
+ >   - Um caller pode user múltiplos called - e cada called é referenciado em uma única linha;
+ >     - Enquanto um Workflow Reutilizável permite usar um workflow inteiro, o Composite Actions combina múltiplos processos dentro de um processo;
 
 A1.3 - Continuous Integration 
  > - Prática de software que requer commitar código frequentemente à um repositório compartilhado; 
