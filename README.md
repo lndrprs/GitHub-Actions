@@ -188,7 +188,30 @@ A1.8 - Self-Hosted Runners
  > - Pode ser físico, virtual, em contêiner, on-premises, ou em nuvem. 
 
 A1.9 - Private Networking
- > - 
+ > - Runners no GitHub possuem acesso para internet pública; 
+ > - Com a Rede Privada, você configura runners para se conectar exclusivamente com a rede privada e recursos; 
+ > - Para configurar esse acesso, existem algumas formas:
+ >   - API Gateway com OIDC (OpenID Connect);
+ >   - WireGuard;
+ >   - VNET (Azure Virtual Network). 
+
+A1.10 - Runner Groups 
+ > - Grupos de Runners são usados para coletar conjuntos de runners e criar um limite de segurança entre eles;
+ > - Runners só podem ficar em um grupo por vez; 
+ > - É possível mover runner de um grupo para outro;
+ > - Opcionalmente, é possível atribuir políticas de acesso ao grupo de Runners.  
+
+A1.11 - Runner Scale Sets 
+ > - Scale Set é um grupo de runners homogêneos, que podem ter jobs atribuídos do Actions;
+ > - O número de runners ativos é propriedade do Runner Scale Set, que pode ser controlado pelo auto-dimensionamento ARC - Actions Runner Controller. 
+ > - É possível utilizar Runner Groups para gerenciar Runner Scale Sets; 
+ > - Você pode adicionar Runner Scale Sets em grupos de Runners já existentes;
+ >   - Porém, Runner Scale Sets podem pertencer a apenas um runner group de cada vez, e só podem ter um label atribuído à eles. 
+
+A1.12 - Actions Runner Controller (ARC)
+ > - Operador Kubernetes que orquestra e escala Runners Self-Hosted para o Actions; 
+ > - Com o ARC, é possível criar Runner Scale Sets que automaticamente escalam baseados no número de workflows no repositório / organização / empresas; 
+ > - ARC é instalado usando charts Helm,
 
 </br>
 </div>
