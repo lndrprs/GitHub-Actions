@@ -93,6 +93,28 @@ A1.2 - Componentes do Actions
  >   - Um workflow que usa outro workflow se chama workflow "caller" - e o workflow chamado se chama "called" workflow; 
  >   - Um caller pode user múltiplos called - e cada called é referenciado em uma única linha;
  >     - Enquanto um Workflow Reutilizável permite usar um workflow inteiro, o Composite Actions combina múltiplos processos dentro de um processo;
+ >
+ > - Environments 
+ >   - Ambientes são usados para descrever o alvo de provisionamento, como produção, staging e desenvolvimento;
+ >   - Nos ambientes, é possível definir:
+ >     - Requisitos de aprovação para procedência de job;
+ >     - Restringir gatilhos de workflow;
+ >     - Regras de proteção; 
+ >     - Limitar acessos.
+ >   - Cada job em um workflow pode referenciar apenas um ambiente. 
+ >
+ > - Workflow Artifacts 
+ >   - Artefato é um arquivo ou coleção de arquivos produzidos durante a execução de um workflow; 
+ >   - Arfetatos permitem a persistência de dados depois que um job é completado, e compartilha esses dados com outro job no mesmo workflow.
+ >   - Tipos comuns de artefatos:
+ >     - Arquivos de Log;
+ >     - Core Dumps;
+ >     - Resultados de testes, falhas, e screenshots;
+ >     - Binários ou arquivos comprimidos; 
+ >     - Performance de teste de estresse, e resultados de código. 
+ >
+ > - Dependency Caching
+ >   - 
 
 A1.3 - Continuous Integration 
  > - Prática de software que requer commitar código frequentemente à um repositório compartilhado; 
