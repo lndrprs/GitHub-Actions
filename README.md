@@ -211,7 +211,24 @@ A1.11 - Runner Scale Sets
 A1.12 - Actions Runner Controller (ARC)
  > - Operador Kubernetes que orquestra e escala Runners Self-Hosted para o Actions; 
  > - Com o ARC, é possível criar Runner Scale Sets que automaticamente escalam baseados no número de workflows no repositório / organização / empresas; 
- > - ARC é instalado usando charts Helm,
+ > - ARC é instalado usando charts Helm.
+
+A1.13 - Secrets 
+ > - Permite armazenar informações sensíveis na organização, repositório, ou ambientes;
+ > - Segredos são variáveis que você cria usando o Workflow do Actions;
+ > - Actions pode apenas ler um segredo, se você explicitamente incluir o segredo no workflow.  
+ > 
+ > - Organization-Level Secrets 
+ >   - Permite compartilhar segredos entre múltiplos repositórios, que reduz a necessidade de criar segredos duplicados; 
+ >   - Atualizando um segredo organizacional, afeta os workflows que usam esse mesmo segredo;
+ >   - Para permitir um segredo disponível num action, precisa definir o segredo como input ou variável de ambiente no arquivo workflow.
+
+A1.14 - GITHUB_TOKEN
+ > - No começo de cada workflow, o GitHub automaticamente cria um Token único, para usar no workflow;
+ > - O GITHUB_TOKEN pode ser usado para autenticar no workflow; 
+ > - As permissões do Token são limitadas ao repositório que contém o workflow; 
+ > - O Token expira quando o job finaliza, ou depois de 24 horas. 
+
 
 </br>
 </div>
