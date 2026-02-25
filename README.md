@@ -112,9 +112,6 @@ A1.2 - Componentes do Actions
  >     - Resultados de testes, falhas, e screenshots;
  >     - Binários ou arquivos comprimidos; 
  >     - Performance de teste de estresse, e resultados de código. 
- >
- > - Dependency Caching
- >   - 
 
 A1.3 - Continuous Integration 
  > - Prática de software que requer commitar código frequentemente à um repositório compartilhado; 
@@ -142,6 +139,56 @@ A1.5 - Actions vs Apps
  >   - Pode incluir um clone do repositório, permitindo ferramentas de provisionamento, e publicação, formatadores de código, e command line;
  >   - Não precisa provisionar código ou servir uma aplicação;
  >   - Possui interface simples para criar e usar segredos, que permite ações interagirem com serviços terceiros. 
+
+A1.6 - GitHub-Hosted Runners 
+ > - Runners são máquinas que executam jobs em um workflow do Actions; 
+ >   - Um runner pode clonar o repositório localmente, instalar software de teste, e executar comandos para avaliar o código;
+ >   - Existem dois tipos de Runners:
+ >     - Single-CPU runners, que são hospedados em contêineres; 
+ >     - Cada Runner hospedado no Github é uma nova máquina virtual;
+ >   - Cada runner possui aplicações e outras ferramentas pré-instaladas.
+ >
+ > - Runner Images 
+ >   - GitHub mantém um conjunto de imagens de VM para o runner hospedado padrão; 
+ >   - As imagens podem ser vistas nessas duas URLs:
+ >     - GitHub: https://github.com/actions/runner-images
+ >     - Parceiros: https://github.com/actions/partner-runner-images
+ >
+ > - Custom Images
+ >   - GitHub fornece uma imagem base, e permite você construir sua própria imagem de VM, customizada para os workflows
+ >   - Imagens customizadas podem possuir:
+ >     - Código de repositório;
+ >     - Imagens de contêineres; 
+ >     - Binários;
+ >     - Certificados; 
+ >     - Entre outros. 
+ >   - Imagens customizadas podem ser usadas apenas com "Larger Runners". 
+ >
+ > - Cloud Hosts 
+ >   - GitHub hospeda runners Linux e Windows em máquinas virtuais no Microsoft Azure;
+ >   - A aplicação do runner é um fork do agente do Azure Pipeline;
+ >   - GitHub hospeda macOS runners nos data centers do Azure. 
+
+A1.7 - Larger Runners 
+ > - Larger Runners são disponibilizados para Organizações e Empresas  usando  o GitHub Team ou planos de GitHub Enterprise Cloud;
+ >   - As características diferenciais de Larger Runners, são:
+ >     - RAM, CPU e espaço de armazenamento;
+ >     - IP estático;
+ >     - Rede Privada da Azure;
+ >     - Agrupamento de Runners;
+ >     - Dimensionamento automático (Autoscaling);
+ >     - Runners com suporte a GPU. 
+ >   - Larger Runners são cobrados por minuto pela quantidade de time de execução do workflow. 
+
+A1.8 - Self-Hosted Runners 
+ > - Runners Auto-Hospedados permitem mais controle de hardware, S.O, e ferramentas de software;
+ > - Permite usar máquinas e serviços que a empresa já mantém e paga para usar; 
+ > - Gratuito para usar com o GitHub Actions, mas é responsabilidade da empresa o custo para manter as máquinas runners;
+ > - Permite criar configurações de hardware customizadas; 
+ > - Pode ser físico, virtual, em contêiner, on-premises, ou em nuvem. 
+
+A1.9 - Private Networking
+ > - 
 
 </br>
 </div>
